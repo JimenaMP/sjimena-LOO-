@@ -71,8 +71,11 @@ public class Aplicacion extends javax.swing.JFrame {
     private void botoncitoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botoncitoActionPerformed
         // TODO add your handling code here:
         Usuario sj=new Usuario();
-        sj.peso=70;
-        sj.altura=1.68f;
+       // sj.peso=70;
+      //  sj.altura=1.68f;
+     sj.setPeso (70);
+     sj.setAltura (1.60f);
+     
         Imc modelo=new Imc ();
         modelo.u=sj;
                 etiqueta.setText(modelo.calcular());
