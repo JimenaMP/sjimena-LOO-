@@ -14,11 +14,11 @@ public class Usuario {
    private float altura;
 
     public float getPeso() {
-        return peso;
+        return peso; //pedir peso
     }
 
     public void setPeso(float peso) {
-        this.peso = peso;
+        this.peso = peso;//ajustar peso
     }
 
     public float getAltura() {
