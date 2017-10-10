@@ -34,15 +34,18 @@ public class Aplicacion extends javax.swing.JFrame {
         textoB = new javax.swing.JTextField();
         textoC = new javax.swing.JTextField();
         boton = new javax.swing.JButton();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
+        raiz1 = new javax.swing.JLabel();
+        raiz2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        jLabel1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel1.setText("a:");
 
+        jLabel2.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel2.setText("b:");
 
+        jLabel3.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel3.setText("c:");
 
         textoA.setText("  ");
@@ -51,6 +54,7 @@ public class Aplicacion extends javax.swing.JFrame {
 
         textoC.setText("  ");
 
+        boton.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         boton.setText("Encontrar raíces");
         boton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -58,9 +62,11 @@ public class Aplicacion extends javax.swing.JFrame {
             }
         });
 
-        jLabel4.setText("X1:");
+        raiz1.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        raiz1.setText("X1:");
 
-        jLabel5.setText("X2:");
+        raiz2.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        raiz2.setText("X2:");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -88,9 +94,9 @@ public class Aplicacion extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(50, 50, 50)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel5)
-                            .addComponent(jLabel4))))
-                .addContainerGap(128, Short.MAX_VALUE))
+                            .addComponent(raiz2)
+                            .addComponent(raiz1))))
+                .addContainerGap(28, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -109,10 +115,10 @@ public class Aplicacion extends javax.swing.JFrame {
                     .addComponent(jLabel3)
                     .addComponent(textoC, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(59, 59, 59)
-                .addComponent(jLabel4)
-                .addGap(36, 36, 36)
-                .addComponent(jLabel5)
-                .addContainerGap(47, Short.MAX_VALUE))
+                .addComponent(raiz1)
+                .addGap(18, 18, 18)
+                .addComponent(raiz2)
+                .addContainerGap(29, Short.MAX_VALUE))
         );
 
         pack();
@@ -120,14 +126,25 @@ public class Aplicacion extends javax.swing.JFrame {
 
     private void botonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonActionPerformed
         // TODO add your handling code here:
-        Valores ec=new Valores ();
-        float a=float.parseFloat(textoA.getText());
+        float a=Float.parseFloat(textoA.getText());
+        float b=Float.parseFloat(textoB.getText ());
+        float c=Float.parseFloat(textoC.getText ());
+        //Para probar generaos un objeto de tipo ecucacion
+        Valores ec=new Valores();
+        //Objeto=ec
         ec.setA(a);
-        float b=float.parseFloat(textoB.getText ());
         ec.setB(b);
-        float c=float.paserFloat(textoC.getText ());
         ec.setC(c);
-        
+            raiz1.setText(ec.raiz1()); 
+            raiz2.setText(ec.raiz2()); 
+            /*Raiz 1 y 2 son objetos por que
+            adelante de ellos pusimos un punto . e invocamos un metodo
+            
+            Estos objetos son de la clase JLabel
+            raiz1 y 2 se comunica con ec por medio del setText
+            el mensaje es (ec.raiz1()), el metodo de ese parentesis, es
+            donde estan los if de r1 y r2, en la clase Valores
+            */
     }//GEN-LAST:event_botonActionPerformed
 
     /**
@@ -170,8 +187,8 @@ public class Aplicacion extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel raiz1;
+    private javax.swing.JLabel raiz2;
     private javax.swing.JTextField textoA;
     private javax.swing.JTextField textoB;
     private javax.swing.JTextField textoC;

@@ -9,15 +9,5 @@ package cuadratica;
  *
  * @author T-107
  */
-public class Solucion {
-    Valores ecucacion;
-    String resultado;
-    
-    public String calcularRaices(){
-         String [] raices = {"X1", "X2"};
-         //discriminante:
-         float disc=
-    
-    
-    }
+public class Solucion {  
 }
