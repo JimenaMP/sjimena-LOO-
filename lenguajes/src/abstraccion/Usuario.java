@@ -28,6 +28,12 @@ public class Usuario {
     public void setAltura(float altura) {
         this.altura = altura;
     }
-    
-   
-}
+        
+   /*public Usuario (){
+       System.out.println("Este es el constructor por defecto de la clase Usuario");
+       //Presiono run file en la clase de Cconstructores.
+       //Por que aqui no se puede (Jajaja).
+*/
+      
+   }
+
