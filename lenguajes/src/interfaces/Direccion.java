@@ -11,4 +11,18 @@ package interfaces;
  */
 public interface Direccion {
     
+    public int x=2;
+    //Hay que darle un valor a x 
+    //por que como no tiene constructor, no hay
+    //quien inicialice el valor.
+    
+    //Metdodo:
+    public void generarDireccion (); //Implementacion (sin punto y coma)
+        //Cuerpo. Llaves {}
+    //Un metodo abstracto no tiene cuerpo.
+    //Esta se implementa en una clase
+    
+    //Pongamos un  constructor
+    
+    
 }
