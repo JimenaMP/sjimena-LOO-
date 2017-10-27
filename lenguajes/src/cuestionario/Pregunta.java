@@ -21,6 +21,7 @@ public class Pregunta {
     }
     
     
+    
 
     public String getTitulo() {
         return titulo;
@@ -37,6 +38,7 @@ public class Pregunta {
     public void setOpciones(ArrayList<Opcion> Opciones) {
         this.Opciones = Opciones;
     }
+    
     
     
 }
