@@ -185,6 +185,7 @@ public class AplicacionCuestionario extends javax.swing.JFrame {
         //for mejorado:
         for(JRadioButton radio: radios2)
         {
+            radio=new JRadioButton(); 
             grupo.add(radio);
           radio.setText(preguntas.get(0).getOpciones().get(indice).getTitulo());
             panelOpciones.add(radio);
