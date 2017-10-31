@@ -50,7 +50,7 @@ public class GeneradorCuestionario {
         
         //Agregar la pregunta al arreglo de preguntas con metodo add
         preguntas.add(p1);
-        return null;
+        return preguntas;
         
         
     }
