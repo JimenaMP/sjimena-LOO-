@@ -99,20 +99,28 @@ public class Aplicacion extends javax.swing.JFrame {
      /* 09-10. Primero le pedimos el valor del texto
       al primer campo, con el nombre que le dimos al
       campo de texto donde el usuario escribira su peso*/
-     
+     try { 
      float peso=Float.parseFloat(textoPeso.getText()); 
      /*Asignamos como flotante, el texto que va a recibir el campo
      "textopeso" del usuario.*/ 
+     Validaciones.validarNumeroNoNegativo(peso);
+     
      sj.setPeso (peso);
      //setPeso va a recibir la variable peso.
      //hacemos lo mismo para la altura
      
      float altura=Float.parseFloat(textoAltura.getText());
+     Validaciones.validarNumeroNoNegativo(altura);
      sj.setAltura (altura);
     
         Imc modelo=new Imc ();
         modelo.u=sj;
                 etiqueta.setText(modelo.calcular());
+     
+     }catch(NumeroNoNegativoException e){
+         //}catch(Exception e){
+         etiqueta.setText(e.getMessage()); 
+     }
                 
     }//GEN-LAST:event_botoncitoActionPerformed
 
